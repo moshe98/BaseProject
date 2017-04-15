@@ -18,7 +18,7 @@ var TimerComponent = (function () {
     }
     TimerComponent.prototype.updateTime = function () {
         this.timer = new Date();
-        return this.timer.getTime();
+        return this.timer.getTime().toLocaleString();
     };
     return TimerComponent;
 }());

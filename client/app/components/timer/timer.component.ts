@@ -20,6 +20,6 @@ export class TimerComponent
     updateTime()
     {
         this.timer = new Date();
-        return this.timer.getTime();
+        return this.timer.getTime().toLocaleString();
     }
 }
