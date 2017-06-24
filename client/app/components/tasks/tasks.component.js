@@ -18,7 +18,6 @@ var TasksComponent = (function () {
         this.taskService.getTasks()
             .subscribe(function (tasks) {
             _this.tasks = tasks;
-            console.log(tasks);
         });
     }
     TasksComponent.prototype.addTask = function (event) {

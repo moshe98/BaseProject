@@ -1,0 +1,5 @@
+{
+    "dbConnectionString" : "mongodb://localhost:27017/BaseProjectAppDb",
+    "alphaVantageBaseUrl" : "http://www.alphavantage.co/query?",
+    "alphaVantageApiKey" : "61GQ"
+}

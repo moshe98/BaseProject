@@ -1,8 +1,9 @@
 var express = require('express');
 var router = express.Router();
 var mongojs = require('mongojs');
-var db = mongojs('mongodb://admin:123456@ds135069.mlab.com:35069/appbase_db',['tasks'])
+var appConfiguration = require("../appConfigurations.json");
 
+var db = mongojs(appConfiguration.dbConnectionString,['tasks'])
 // Get All Tasks
 router.get('/tasks', function(req, res, next){
     db.tasks.find(function(err, tasks){
@@ -40,6 +41,7 @@ router.post('/task', function(req,res,next)
     var task = req.body;
     if(!task.title || task.isDone)
     {
+        console.log("err");
         res.status(400);
         res.json({error : 'Bad Data'});
     }
